@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="layouts/root_layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
-    <link href="static/css/bootstrap.css" rel="stylesheet"/>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
+    <link th:href="@{/css/custom.css}" rel="stylesheet"/>
 </head>
 <body>
 <!--Header-->
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
+            <a class="navbar-brand" href="#">AvarishSpring</a>
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
+            <li><a href="#">BMI</a></li>
+            <li><a href="#">Protein</a></li>
+            <li>
+                <form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Sign Out" class="signout"/>
+                </form>
+            </li>
         </ul>
     </div>
 </nav>
@@ -32,6 +36,6 @@
 <!--Content-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="static/js/bootstrap.js"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
 </body>
 </html>
