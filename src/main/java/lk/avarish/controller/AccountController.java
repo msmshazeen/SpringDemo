@@ -15,6 +15,6 @@ public class AccountController {
     //controller for url '/login'
     @RequestMapping(value = "/login")
     public String login(Model model) {
-        return "register";
+        return "login";
     }
 }
