@@ -1,0 +1,11 @@
+.navbar {
+    border-radius: 0;
+}
+
+.signout {
+    background: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    padding-top: 15px;
+}
