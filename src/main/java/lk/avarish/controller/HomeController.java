@@ -9,4 +9,17 @@ public class HomeController {
     public String home(){
         return "index";
     }
+
+    //controller for url '/bmi'
+    @RequestMapping(value = "/bmi")
+    public String bmi() {
+        return "bmi";
+    }
+
+    //controller for url '/protein'
+    @RequestMapping(value = "/protein")
+    public String protein() {
+        return "protein";
+    }
+
 }
